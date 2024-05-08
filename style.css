@@ -823,9 +823,9 @@ input:checked ~ .menu{
 
 /*Call to action for contact page (SERVICES  PAGE)*/
 .cta {
-  width: 100%;
+  max-width: 100%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(images/print.jpg);
+    url(images/stylo_octi.jpg);
   background-position: center;
   background-size: cover;
   border-bottom: solid black 0.5rem;
@@ -834,6 +834,12 @@ input:checked ~ .menu{
   padding-bottom: 200px;
 }
 .cta h1 {
+  font-family: pixcon;
+  color: #fff;
+  margin-bottom: 40px;
+  padding: 0;
+}
+.cta h3 {
   font-family: pixcon;
   color: #fff;
   margin-bottom: 40px;
@@ -918,6 +924,27 @@ input:checked ~ .menu{
 }
 
 @media (max-width: 700px) {
+  .droit p {
+    padding: 20px;
+  }
+  .footer-col {
+    padding: 10px;
+  }
+  .footer h6 {
+    font-size: 13px;
+  }
+  .footer img {
+    width: 10vh;
+  }
+  .footer {
+    min-height: 120vh;
+    width: 100%;
+  }
+  .row-footer {
+    flex-direction: column;
+  }
+}
+@media (max-width: 1200px) {
   .droit p {
     padding: 20px;
   }
@@ -1081,7 +1108,7 @@ fin TITLE*/
     height: 500px;
     background-color: #F08049;*/
 
-.contact {
+#contact_form {
   flex-direction: column;
   display: flex;
   padding: 50px;
@@ -1089,10 +1116,23 @@ fin TITLE*/
   box-sizing: border-box;
   font-family: pixcon;
   font-size: 15px;
+  background: #f08049;
 }
-.dropdown {
-  font-family: pixcon;
-  font-size: 15px;
+#contact_form input {
+  box-shadow: 0.5vw 0.5vw black;
+  margin: 4px;
+}
+#contact_form textarea {
+  box-shadow: 0.5vw 0.5vw black;
+  border: solid black 3px;
+  margin: 4px;
+}
+#contact_form select {
+  font-family: Pixcon;
+  font-size: 10px;
+  margin: 4px;
+  border: solid black 2px;
+  box-shadow: 0.5vw 0.5vw black;
 }
 .flex-container {
   display: flex;
@@ -1100,4 +1140,35 @@ fin TITLE*/
 }
 .form_butt {
   margin-top: 10px;
+}
+
+/*Call to action for contact page (SERVICES  PAGE)*/
+.cta-form {
+  max-width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(images/print.jpg);
+  background-position: center;
+  background-size: cover;
+  border-bottom: solid black 0.5rem;
+  text-align: center;
+  padding: 100px 0;
+  padding-bottom: 200px;
+}
+.cta-form h1 {
+  font-family: pixcon;
+  color: #fff;
+  margin-bottom: 40px;
+  padding: 0;
+}
+.cta-form h3 {
+  font-family: pixcon;
+  color: #fff;
+  margin-bottom: 40px;
+  padding: 0;
+}
+
+@media (max-width: 700px) {
+  .cta-form h1 {
+    font-size: 15px;
+  }
 }
