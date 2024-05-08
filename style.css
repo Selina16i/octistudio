@@ -849,6 +849,7 @@ input:checked ~ .menu{
   background: transparent;
   position: relative;
   cursor: pointer;
+  font-family: Pixcon;
 }
 .hero-btn:hover {
   border: 0.5rem solid #ff8243;
@@ -1083,7 +1084,7 @@ fin TITLE*/
 .contact {
   flex-direction: column;
   display: flex;
-  padding: 20px;
+  padding: 50px;
   margin: 0;
   box-sizing: border-box;
   font-family: pixcon;
