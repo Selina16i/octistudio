@@ -119,3 +119,19 @@ document.getElementById('contact_form').addEventListener('submit', function (e) 
   swal("Succès!", "Le formulaire a bien été envoyé", "success");
 });
 
+document.getElementById('ok_button').addEventListener('click', function (e) {
+  e.preventDefault(); // Prevent the default action of the link
+  var form = document.getElementById('contact_form');
+  form.style.display = 'flex'; // Show the form
+
+  // Animate the form
+  anime({
+    targets: form,
+    translateY: ['-100%', 0], // Change the Y position from -100% to 0
+    opacity: [0, 1], // Change the opacity from 0 to 1
+    begin: function () {
+      form.style.zIndex = '1'; // Bring the form to the front
+    },
+    duration: 1500,
+  });
+});
