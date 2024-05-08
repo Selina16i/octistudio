@@ -1083,7 +1083,7 @@ fin TITLE*/
 .contact {
   flex-direction: column;
   display: flex;
-  padding: 0;
+  padding: 20px;
   margin: 0;
   box-sizing: border-box;
   font-family: pixcon;
@@ -1093,4 +1093,10 @@ fin TITLE*/
   font-family: pixcon;
   font-size: 15px;
 }
-
+.flex-container {
+  display: flex;
+  flex-direction: row;
+}
+.form_butt {
+  margin-top: 10px;
+}
