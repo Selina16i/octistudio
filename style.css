@@ -430,10 +430,10 @@ header .container {
 }
 
 /* CSS icone burger*/
-input {
+/* input {
   display: none;
   visibility: hidden;
-}
+} */
 
 .burger {
   position: absolute;
@@ -970,7 +970,7 @@ input:checked ~ .menu{
     color: #fff;
     padding: 10px 15px;
     border: none;
-    border-radius: 4px;
+    border-radius: 4px;f
     cursor: pointer; 
   }
   .flex-container {
