@@ -1180,16 +1180,19 @@ fin TITLE*/
 .page{
     height: 500px;
     background-color: #F08049;*/
-
+.contact {
+  background: #039cbd;
+}
 #contact_form {
+  max-width: 50%;
   flex-direction: column;
   display: none;
   padding: 50px;
-  margin: 0;
+  margin: auto;
   box-sizing: border-box;
   font-family: pixcon;
   font-size: 15px;
-  background: #f08049;
+  background: #039cbd;
   z-index: -1000;
   position: relative;
 }
@@ -1254,6 +1257,40 @@ fin TITLE*/
 
 @media (max-width: 700px) {
   .cta-form h1 {
+    font-size: 15px;
+  }
+}
+/*Call to action for contact page (SERVICES  PAGE)*/
+.cta_to_services {
+  max-width: 100%;
+  background: #f08049;
+  background-position: center;
+  background-size: cover;
+  border-bottom: solid black 0.5rem;
+  text-align: center;
+  padding: 80px 0;
+  padding-bottom: 100px;
+  z-index: 1000;
+  position: relative;
+  /* Add this line */
+}
+
+.cta_to_services h1 {
+  font-family: pixcon;
+  color: #fff;
+  margin-bottom: 40px;
+  padding: 0;
+}
+
+.cta_to_services h3 {
+  font-family: pixcon;
+  color: #fff;
+  margin-bottom: 40px;
+  padding: 0;
+}
+
+@media (max-width: 700px) {
+  .cta_to_services h1 {
     font-size: 15px;
   }
 }
