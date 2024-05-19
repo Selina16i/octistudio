@@ -1,4 +1,16 @@
 <?php 
+<html>
+<!DOCTYPE html>
+<html lang="fren">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html></html>
 header('Content-Type: application/rss+xml')
 $bdd = new PDO('','root', '');
 $articles = $bdd->query('SELECT * FROM articles ORDER BY date_time_post DESC LIMIT 0,25');
