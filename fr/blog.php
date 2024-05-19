@@ -66,7 +66,18 @@ $articles = $bdd->query('SELECT * FROM articles ORDER BY date_time_post DESC LIM
     <script src="../script.js"></script>
      <header>
         <div class="container">
-                <button class="header_button" type="button"><img src="../images/burger.png" alt="">Menu</button>
+                <label for="">
+                    <div class="menu-slide">
+                        <button class="header_button" type="button">Menu</button>
+                        <ul>
+                            <li><a href="accueil.html" target='blank'>Accueil</a></li>
+                            <li><a href="services.html" target='blank'>Nos services</a></li>
+                            <li><a href="blog.php" target='blank'> Blog</a></li>
+                            <li><a href="contact.html" target='blank'>Contact</a></li>
+                        </ul>
+                    </div>
+                </label>
+                
 
             <img id="logo" src="../images/logo.png">
 
