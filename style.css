@@ -2,13 +2,28 @@
   font-family: PixCon;
   src: local("/fonts/PixCon.ttf");
 }
-
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+@font-face {
+  font-family: JosefinSans-Bold;
+  src: local("/fonts/JosefinSans-Bold.ttf");
+}
+@font-face {
+  font-family: JosefinSans;
+  src: local("/fonts/JosefinSans-Regular.ttf");
+}
 
 body {
   margin: 0;
 }
 
+* h1 {
+  font-weight: normal;
+}
+* h2 {
+  font-weight: normal;
+}
+* h3 {
+  font-weight: normal;
+}
 .border {
   border: solid black 0.5em;
   position: fixed;
@@ -435,86 +450,19 @@ header .container {
   background-color: #fcbf28;
 }
 
-/* CSS icone burger*/
-/* input {
-  display: none;
-  visibility: hidden;
-} */
-
-.burger {
-  position: absolute;
-  height: 40px;
-  width: 40px;
-  top: 40px;
-  left: 15px;
-  /*z-index: 1;  si on met z index à 0 on ne verra pas le menu donc on met 1 pour le faire apparaitre ds le coin de la page*/
-  cursor: pointer;
-  background-color: aliceblue;
-  box-shadow: 3px 3px 5px black;
+/*-------------------------MENU-------------------------*/
+.header_button img {
+  width: 5%;
+  padding: 0 2px;
+  margin: 0;
 }
-
-.burger img {
-  width: 35px;
-}
-
-/*.burger .place{ /* css des span pour les rendre visible,, ici on a 2 classes: burger ET place
-    position: absolute;
-    height: 5px;
-    width: 30px;
-    background-color: rgb(0, 0, 0);
-    /*transition: 0.3s ease;
-}
-
-/*.burger .haut{
-    top: 25%;
-    left: 50%;
-    /*transform: translate(-50%, -50%);
-}
-
-.burger .milieu{
-    top: 50%;
-    left: 50%;
-   /*transform: translate(-50%, -50%);
-}
-.burger .bas{
-    top: 75%;
-    left: 50%;
-    /*transform: translate(-50%, -50%);
-}*/
-
-/*input:checked ~ .burger .haut{
-    left: 2px;
-    top: 18px;
-    width: 35px;
-    transform: rotate(45deg);
-}
-
-input:checked ~ .burger .milieu{
-   opacity: 0;
-   transform: translateX(20px);
-}
-
-input:checked ~ .burger .bas{
-    left: 2px;
-    top: 18px;
-    width: 35px;
-    transform: rotate(-45deg);
-}
-
-input:checked ~ .menu{
-    transform: translateX(0); /* ce transform est lié au transform plus haut du menu ou on etait à -200px; ici on met 0 car 0 est la valeur initiale du block 
-    box-shadow: 3px 3px 5px black;
-}
-
-/* FIN CSS icone burger*/
-
 /*-------------------------SERVICES-------------------------*/
 
 /*bannière*/
 .img-slider {
   position: relative;
   width: 100%;
-  height: 795px;
+  padding-bottom: 795px;
   margin: auto;
   border-top: solid black 0.5em;
   border-bottom: solid black 0.5em;
@@ -524,7 +472,7 @@ input:checked ~ .menu{
 .img-slider .slide {
   z-index: 1;
   position: absolute;
-  width: 100%;
+  width: 90%;
   clip-path: inset(0 100% 0 0);
 }
 
@@ -942,6 +890,7 @@ input:checked ~ .menu{
   position: relative;
   padding-top: 0;
   margin-top: 0;
+  margin: 0;
 }
 
 .footer h6 {
@@ -1183,8 +1132,7 @@ input:checked ~ .menu{
 }
 .img-slider .slide img {
   z-index: 1;
-  max-width: 100%;
-  height: 795px;
+  width: 100%;
   object-fit: cover;
   /* border-bottom: solid black 0.5em; */
   border-right: solid black 0.5em;
