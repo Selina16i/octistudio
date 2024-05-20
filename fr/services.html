@@ -4,127 +4,261 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nos Services</title>
+    <link rel="icon" type="image/png" href="../images/octi_icon.png" />
+    <link rel="stylesheet" href="../selina.css" />
     <link rel="stylesheet" href="../style.css" />
   </head>
   <body>
+    <img
+      id="octi-basic"
+      src="../images/octi-basic.png"
+      alt="Poulpe de l'agence d'infographie varoise OCTI Studio"
+    />
     <div class="border">
-      <!-------------------------MENU-------------------->
-      <header>
-        <div class="container">
-          <input type="checkbox" />
-          <div class="burger">
-            <span class="haut place"></span>
-            <span class="milieu place"></span>
-            <span class="bas place"></span>
-          </div>
-          <button class="header_button" type="button">Menu</button>
+      <header id="home-header">
+        <div class="website_container">
+          <!------------------------------------------------------HEADER------------------------------------------------------>
 
-          <img id="logo" src="../images/logo.png" />
+          <button id="menu_button" class="header_button" type="button">
+            <div class="burger">
+              <div class="bar1"></div>
+              <div class="bar2"></div>
+              <div class="bar3"></div>
+            </div>
 
-          <button id="registration_button" class="header_button" type="button">
-            Connexion
+            <p>Menu</p>
           </button>
 
-          <section id="registration" class="hidden">
-            <button id="registration_return">Retour</button>
+          <img
+            id="logo"
+            src="../images/logo.png"
+            alt="Logo de l'agence d'infographie varoise OCTI Studio"
+          />
 
-            <form
-              id="registration_form"
-              action="../create_member.php"
-              method="POST"
-            >
-              <legend>Inscription</legend>
+          <button id="registration_button" class="header_button" type="button">
+            <img
+              src="../images/member_icon.png"
+              alt="Icône de membre de l'agence d'infographie varoise OCTI Studio"
+            />
+            <p>Connexion</p>
+          </button>
 
-              <div>
-                <label for="last_name">Nom</label>
-                <input
-                  type="text"
-                  id="last_name"
-                  name="last_name"
-                  placeholder="Doe"
-                  required
-                />
+          <section id="registration" class="registration_hidden">
+            <!-------------------------------REGISTRATION------------------------------->
+
+            <button id="registration_return">
+              <img src="../images/return.png" />
+            </button>
+
+            <div id="registration_box">
+              <form
+                id="registration_form"
+                action="../create_member.php"
+                method="POST"
+              >
+                <legend>Inscription</legend>
+
+                <div>
+                  <label for="last_name">Nom</label>
+                  <input
+                    type="text"
+                    id="last_name"
+                    name="last_name"
+                    placeholder="Doe"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label for="first_name">Prénom</label>
+                  <input
+                    type="text"
+                    id="first_name"
+                    name="first_name"
+                    placeholder="John"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label for="email">Adresse-mail</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="johndoe@octistudio.fr"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label for="password">Mot de passe</label>
+                  <input
+                    type="password"
+                    id="registration_password"
+                    name="password"
+                    minlength="8"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label for="confirm_password"
+                    >Confirmation du mot de passe</label
+                  >
+                  <input
+                    type="password"
+                    id="confirm-password"
+                    name="confirm-password"
+                  />
+                </div>
+
+                <input type="hidden" name="status" value="pending" />
+
+                <input type="hidden" name="origin" value="fr_registration" />
+
+                <button id="registration-submit-button" type="submit">
+                  S'inscrire
+                </button>
+
+                <p>
+                  Vous avez déjà un compte ?
+                  <a id="show_login" href="#">Cliquez ici.</a>
+                </p>
+              </form>
+
+              <!----------------------------------LOGIN----------------------------------->
+
+              <form id="login_form" method="POST" style="display: none">
+                <legend>Connexion</legend>
+
+                <div>
+                  <label for="email">Adresse-mail</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="johndoe@octistudio.fr"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label for="password">Mot de passe</label>
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    required
+                  />
+                </div>
+
+                <button type="submit">Se connecter</button>
+
+                <p>
+                  Vous n'avez pas encore de compte ?
+                  <a id="show_registration" href="#">Cliquez ici.</a>
+                </p>
+              </form>
+            </div>
+          </section>
+
+          <section id="menu" class="menu_hidden">
+            <!-------------------------------MENU------------------------------->
+
+            <button id="menu_return">
+              <img src="../images/return.png" />
+            </button>
+
+            <div id="menu_box" class="menu_hidden">
+              <h2>Menu</h2>
+
+              <nav>
+                <ul>
+                  <li><a href="accueil.php" target="_blank">Accueil</a></li>
+                  <li>-</li>
+                  <li>
+                    <a href="services.html" target="_blank">Nos services</a>
+                  </li>
+                  <li>-</li>
+                  <li><a href="blog.php" target="_blank">Blog</a></li>
+                  <li>-</li>
+                  <li><a href="contact.html" target="_blank">Contact</a></li>
+                </ul>
+              </nav>
+
+              <div class="change_language">
+                <a href="../en/home.php">
+                  <p>Change language :</p>
+                  <div class="language_choice">
+                    <img src="../images/usa.png" />
+                    <p>ENGLISH</p>
+                  </div>
+                </a>
               </div>
-
-              <div>
-                <label for="first_name">Prénom</label>
-                <input
-                  type="text"
-                  id="first_name"
-                  name="first_name"
-                  placeholder="John"
-                  required
-                />
-              </div>
-
-              <div>
-                <label for="email">Adresse-mail</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="johndoe@octistudio.fr"
-                  required
-                />
-              </div>
-
-              <div>
-                <label for="password">Mot de passe</label>
-                <input type="password" id="password" name="password" required />
-              </div>
-
-              <div>
-                <label for="confirm_password"
-                  >Confirmation du mot de passe</label
-                >
-                <input
-                  type="password"
-                  id="confirm_password"
-                  name="confirm_password"
-                />
-              </div>
-
-              <input type="hidden" name="status" value="pending" />
-
-              <button type="submit">S'inscrire</button>
-
-              <p>
-                Vous avez déjà un compte ?
-                <a id="show_login" href="#">Cliquez ici.</a>
-              </p>
-            </form>
-
-            <div id="registration_message"></div>
-
-            <form id="login_form" style="display: none" method="POST">
-              <legend>Connexion</legend>
-
-              <div>
-                <label for="email">Adresse-mail</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="johndoe@octistudio.fr"
-                  required
-                />
-              </div>
-
-              <div>
-                <label for="password">Mot de passe</label>
-                <input type="password" id="password" name="password" required />
-              </div>
-
-              <button type="submit">Se connecter</button>
-
-              <p>
-                Vous n'avez pas encore de compte ?
-                <a id="show_registration" href="#">Cliquez ici.</a>
-              </p>
-            </form>
+            </div>
           </section>
         </div>
       </header>
+
+      <div id="notification" class="notification">
+        <div class="notification-content">
+          <div class="congrats-box">
+            <img
+              src="../images/octi-happi.png"
+              alt="Poulpe heureux du logo de l'agence d'infographie varoise OCTI Studio"
+            />
+            <p class="congrats">Félicitations !</p>
+          </div>
+          <p>
+            Votre demande d'inscription a bien été prise en compte, veuillez
+            attendre la validation d'un administrateur.
+          </p>
+          <img
+            class="arrow"
+            src="../images/arrow.png"
+            alt="Symbole de flèche"
+          />
+        </div>
+      </div>
+
+      <div class="notification_wrong_id">
+        <div class="notification-content">
+          <div class="congrats-box">
+            <img
+              src="../images/octi-basic.png"
+              alt="Poulpe heureux du logo de l'agence d'infographie varoise OCTI Studio"
+            />
+            <p class="congrats">Mince !</p>
+          </div>
+          <p>Vos identifiants ne correspondent à aucun compte.</p>
+          <img
+            class="arrow"
+            src="../images/arrow.png"
+            alt="Symbole de flèche"
+          />
+        </div>
+      </div>
+      <!------------------------------------------------------ANNOUNCEMENT------------------------------------------------------>
+
+      <section id="announcement">
+        <div class="website_container">
+          <div class="marquee_right-to-left">
+            <p>
+              ASSISTEZ À UN ÉVÉNEMENT EXCEPTIONNEL AUTOUR DE LA "TRUFFE DU
+              CANADA" LE 23 MAI PAR OCTISTUDIO -
+            </p>
+            <p>
+              ASSISTEZ À UN ÉVÉNEMENT EXCEPTIONNEL AUTOUR DE LA "TRUFFE DU
+              CANADA" LE 23 MAI PAR OCTISTUDIO -
+            </p>
+            <p>
+              ASSISTEZ À UN ÉVÉNEMENT EXCEPTIONNEL AUTOUR DE LA "TRUFFE DU
+              CANADA" LE 23 MAI PAR OCTISTUDIO -
+            </p>
+          </div>
+        </div>
+      </section>
 
       <!-------------------------SLIDE BANNIERE-------------------->
       <div class="bod">
@@ -133,20 +267,37 @@
           <div class="slide active">
             <div class="row-slide">
               <div class="col50">
+                <img src="../images/services.png" alt="" />
+              </div>
+              <div class="col50">
+                <div class="info">
+                  <h2>Quels services proposons nous?</h2>
+                  <p>
+                    Vous êtes intéressés par les services que nous proposons?
+                    <br />Appuyez sur les carrés ci dessous pour en savoir plus
+                    !^^
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-------------------------PREMIERE IMAGE-------------------->
+          <div class="slide">
+            <div class="row-slide">
+              <div class="col50">
                 <img src="../images/graph.jpg" alt="" />
               </div>
               <div class="col50">
                 <div class="info">
                   <h2>GRAPHISME</h2>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Ipsa assumenda molestiae illo odio est tempora quasi ex
-                    neque ab, blanditiis iusto sit, inventore perferendis
-                    obcaecati, quibusdam modi ut nostrum dolorem.Lorem ipsum
-                    dolor sit amet consectetur adipisicing elit. Ipsa assumenda
-                    molestiae illo odio est tempora quasi ex neque ab,
-                    blanditiis iusto sit, inventore perferendis obcaecati,
-                    quibusdam modi ut nostrum dolorem.
+                    Chez OCTI Studio, nous sommes fiers de transformer vos idées
+                    en créations graphiques remarquables.
+                    <br />Nos designers talentueux réalisent des visuels adaptés
+                    à tous vos supports de communication, que ce soit des
+                    affiches, des brochures, des cartes de visite ou des
+                    bannières publicitaires. <br />Nous vous offrons une qualité
+                    graphique exceptionnelle pour valoriser vos projets.
                   </p>
                 </div>
               </div>
@@ -160,16 +311,15 @@
               </div>
               <div class="col50">
                 <div class="info">
-                  <h2>PRINT</h2>
+                  <h2>Impression</h2>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Ipsa assumenda molestiae illo odio est tempora quasi ex
-                    neque ab, blanditiis iusto sit, inventore perferendis
-                    obcaecati, quibusdam modi ut nostrum dolorem.Lorem ipsum
-                    dolor sit amet consectetur adipisicing elit. Ipsa assumenda
-                    molestiae illo odio est tempora quasi ex neque ab,
-                    blanditiis iusto sit, inventore perferendis obcaecati,
-                    quibusdam modi ut nostrum dolorem.
+                    Notre service d'impression vous assure des résultats
+                    impeccables. Nous gérons l'intégralité du processus, de la
+                    conception à la production finale, pour des supports
+                    imprimés tels que des flyers, des brochures et des affiches.
+                    <br />Nous utilisons les meilleures technologies
+                    d'impression pour garantir des rendus professionnels et de
+                    haute qualité.
                   </p>
                 </div>
               </div>
@@ -185,14 +335,14 @@
                 <div class="info">
                   <h2>MOTION DESIGN</h2>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Ipsa assumenda molestiae illo odio est tempora quasi ex
-                    neque ab, blanditiis iusto sit, inventore perferendis
-                    obcaecati, quibusdam modi ut nostrum dolorem.Lorem ipsum
-                    dolor sit amet consectetur adipisicing elit. Ipsa assumenda
-                    molestiae illo odio est tempora quasi ex neque ab,
-                    blanditiis iusto sit, inventore perferendis obcaecati,
-                    quibusdam modi ut nostrum dolorem.
+                    Le motion design est une de nos spécialités chez OCTI
+                    Studio. Nous réalisons des animations dynamiques et
+                    engageantes pour vos vidéos promotionnelles, présentations
+                    d'entreprise et contenus pour les réseaux sociaux.
+                    <br />Grâce à notre expertise, nous donnons vie à vos
+                    messages avec des mouvements fluides et des effets visuels
+                    captivants, rendant votre communication encore plus
+                    impactante.
                   </p>
                 </div>
               </div>
@@ -206,16 +356,16 @@
               </div>
               <div class="col50">
                 <div class="info">
-                  <h2>TYPOGRAPHIE</h2>
+                  <h2>IDENTITé VISUELLE</h2>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Ipsa assumenda molestiae illo odio est tempora quasi ex
-                    neque ab, blanditiis iusto sit, inventore perferendis
-                    obcaecati, quibusdam modi ut nostrum dolorem.Lorem ipsum
-                    dolor sit amet consectetur adipisicing elit. Ipsa assumenda
-                    molestiae illo odio est tempora quasi ex neque ab,
-                    blanditiis iusto sit, inventore perferendis obcaecati,
-                    quibusdam modi ut nostrum dolorem.
+                    Chez OCTI Studio, nous nous engageons à créer des identités
+                    graphiques qui reflètent parfaitement l'essence de votre
+                    marque.
+                    <br />Nous développons des logos uniques, des chartes
+                    graphiques harmonieuses et des univers visuels distinctifs
+                    pour renforcer votre image de marque. <br />Notre objectif
+                    est de vous fournir une identité visuelle forte et
+                    mémorable, en accord avec vos valeurs et votre message.
                   </p>
                 </div>
               </div>
@@ -224,6 +374,7 @@
 
           <div class="navigation">
             <div class="btn active"></div>
+            <div class="btn"></div>
             <div class="btn"></div>
             <div class="btn"></div>
             <div class="btn"></div>
@@ -236,12 +387,7 @@
       <section class="project">
         <div class="projects">
           <h1>Nos projets</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
-            assumenda quos, soluta mollitia sint nesciunt labore esse
-            aspernatur? Quae excepturi, saepe reprehenderit ratione consequuntur
-            hic laudantium assumenda nam impedit illum!
-          </p>
+          <p>Voici certains de nos projets phares de cette année !</p>
 
           <div class="row">
             <div class="projects-col">
@@ -270,7 +416,7 @@
       <section class="team">
         <div class="equipe">
           <h1>L'équipe</h1>
-          <div class="row">
+          <!-- <div class="row">
             <div class="equipe-col">
               <img src="../images/equipe_temporaire/aki.png" alt="" />
               <div class="equipe-layer">
@@ -289,40 +435,36 @@
                 <h3>Killian <br />Responsable marketing et communication</h3>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </section>
 
       <!-------------------------PROMESSES-------------------->
       <section class="promesses">
         <div class="course">
-          <h1>Nos promesses</h1>
+          <h1>Nos Valeurs</h1>
           <div class="row">
             <div class="course-col">
-              <h3>Gentil</h3>
+              <h3>Accessible</h3>
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Voluptates rem ut ipsa modi consectetur placeat eligendi esse
-                quo nemo! Itaque, illo saepe a nemo perferendis quas id
-                voluptatum fugiat nulla!
+                Choisissez notre agence d'infographie, où la qualité
+                exceptionnelle rencontre des tarifs accessibles pour tous vos
+                projets visuels !
               </p>
             </div>
             <div class="course-col">
-              <h3>Sympa</h3>
+              <h3>Créatif</h3>
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Voluptates rem ut ipsa modi consectetur placeat eligendi esse
-                quo nemo! Itaque, illo saepe a nemo perferendis quas id
-                voluptatum fugiat nulla!
+                Transformez vos idées en réalité visuelle avec notre agence
+                d'infographie, où la créativité est au cœur de chaque projet !
               </p>
             </div>
             <div class="course-col">
-              <h3>Creatif</h3>
+              <h3>Polyvalent</h3>
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Voluptates rem ut ipsa modi consectetur placeat eligendi esse
-                quo nemo! Itaque, illo saepe a nemo perferendis quas id
-                voluptatum fugiat nulla!
+                Découvrez notre agence d'infographie polyvalente, dédiée à
+                répondre à tous vos besoins visuels sur tous types de projets
+                graphiques !
               </p>
             </div>
           </div>
@@ -332,7 +474,9 @@
       <!-------------------------Call to action for contact page-------------------->
       <section class="cta">
         <h1>Vous avez un projet en tête ?</h1>
-        <a href="" class="hero-btn">Contactez nous ici ^^</a>
+        <button class="header_button" type="button">
+          <a href="contact.html" target="_blank">Contactez nous ici ^^ </a>
+        </button>
       </section>
 
       <!-------------------------Footer-------------------->
@@ -341,10 +485,10 @@
           <div class="footer-col">
             <ul>
               <h6>Menu</h6>
-              <li><a href="accueil.html">Accueil</a></li>
-              <li><a href="services.html">Nos services</a></li>
-              <li><a href="contact.html">Contact</a></li>
-              <li><a href="blog.php">Blog</a></li>
+              <li><a href="accueil.html" target="_blank">Accueil</a></li>
+              <li><a href="services.html" target="_blank">Nos services</a></li>
+              <li><a href="contact.html" target="_blank">Contact</a></li>
+              <li><a href="blog.php" target="_blank">Blog</a></li>
             </ul>
           </div>
 
@@ -366,7 +510,9 @@
           </div>
 
           <div class="footer-col">
-            <img src="../images/logo.png" alt="" />
+            <a href="accueil.html" target="_blank"
+              ><img src="../images/logo.png" alt=""
+            /></a>
           </div>
         </div>
         <div class="droit">
@@ -374,7 +520,281 @@
         </div>
       </section>
 
-      <script src="../script.js"></script>
+      <script>
+        /*const menuButton = document.querySelector('#menu_button');
+            const burger = document.querySelector('.burger');
+
+            menuButton.addEventListener('click', () => {
+                burger.classList.toggle('open');
+            });*/
+
+        // Apparition et disparition du menu
+
+        const overlay = document.getElementById("overlay");
+
+        const menu = document.getElementById("menu");
+        const menuButton = document.getElementById("menu_button");
+        const menuReturn = document.getElementById("menu_return");
+
+        menuButton.addEventListener("click", () => {
+          menu.classList.add("menu_revealed");
+          menu.classList.remove("menu_hidden");
+          overlay.classList.add("darken_overlay");
+          overlay.classList.remove("border_overlay");
+        });
+
+        menuReturn.addEventListener("click", () => {
+          menu.classList.add("menu_hidden");
+          menu.classList.remove("menu_revealed");
+          overlay.classList.add("border_overlay");
+          overlay.classList.remove("darken_overlay");
+        });
+
+        // Apparition et disparition du formulaire d'inscription
+
+        const registration = document.getElementById("registration");
+        const registrationButton = document.getElementById(
+          "registration_button"
+        );
+        const registrationReturn = document.getElementById(
+          "registration_return"
+        );
+
+        registrationButton.addEventListener("click", () => {
+          registration.classList.add("registration_revealed");
+          registration.classList.remove("registration_hidden");
+          overlay.classList.add("darken_overlay");
+          overlay.classList.remove("border_overlay");
+        });
+
+        registrationReturn.addEventListener("click", () => {
+          registration.classList.add("registration_hidden");
+          registration.classList.remove("registration_revealed");
+          overlay.classList.add("border_overlay");
+          overlay.classList.remove("darken_overlay");
+        });
+
+        document.addEventListener("click", (event) => {
+          const isClickInsideMenu = menu.contains(event.target);
+          const isClickInsideMenuButton = menuButton.contains(event.target);
+          const isClickInsideRegistration = registration.contains(event.target);
+          const isClickInsideRegistrationButton = registrationButton.contains(
+            event.target
+          );
+
+          if (
+            !isClickInsideMenu &&
+            !isClickInsideMenuButton &&
+            !isClickInsideRegistration &&
+            !isClickInsideRegistrationButton
+          ) {
+            menu.classList.add("menu_hidden");
+            menu.classList.remove("menu_revealed");
+            registration.classList.add("registration_hidden");
+            registration.classList.remove("registration_revealed");
+            overlay.classList.add("border_overlay");
+            overlay.classList.remove("darken_overlay");
+          }
+        });
+
+        // Switch entre formulaire d'inscription et formulaire de connexion
+
+        const registrationForm = document.getElementById("registration_form");
+        const loginForm = document.getElementById("login_form");
+
+        if (registrationForm && loginForm) {
+          document
+            .getElementById("show_login")
+            .addEventListener("click", function (event) {
+              registrationForm.style.display = "none";
+              loginForm.style.display = "flex";
+            });
+
+          document
+            .getElementById("show_registration")
+            .addEventListener("click", function (event) {
+              loginForm.style.display = "none";
+              registrationForm.style.display = "flex";
+            });
+        }
+
+        // Vérification de la confirmation du mot de passe
+
+        const passwordInput = document.getElementById("registration_password");
+        const confirmPasswordInput =
+          document.getElementById("confirm-password");
+        const submitButton = document.getElementById(
+          "registration-submit-button"
+        );
+
+        submitButton.addEventListener("click", function (event) {
+          if (passwordInput.value !== confirmPasswordInput.value) {
+            alert("Les mots de passe ne correspondent pas.");
+            event.preventDefault();
+          }
+        });
+
+        // Affichage de la notification d'inscription
+
+        const submittedParams = new URLSearchParams(window.location.search);
+        const notification = document.querySelector(".notification");
+
+        if (submittedParams.has("submitted")) {
+          const isSubmitted = submittedParams.get("submitted");
+
+          if (isSubmitted === "true") {
+            notification.classList.add("notification-show");
+
+            setTimeout(() => {
+              notification.classList.add("notification-hidden");
+            }, 10000);
+          }
+        }
+
+        notification.addEventListener("click", () => {
+          notification.classList.add("notification-hidden-fast");
+        });
+
+        var image = document.getElementById("octi-basic");
+
+        var buttons = document.querySelectorAll("button");
+
+        buttons.forEach(function (button) {
+          button.addEventListener("mouseover", function () {
+            octiLove(image);
+          });
+          button.addEventListener("mouseout", function () {
+            octiBasic(image);
+          });
+        });
+
+        // Affichage de la notification d'erreur de connexion
+
+        const wrongIdParams = new URLSearchParams(window.location.search);
+        const wrongIdNotification = document.querySelector(
+          ".notification_wrong_id"
+        );
+
+        if (wrongIdParams.has("wrong_id")) {
+          const isWrongId = wrongIdParams.get("wrong_id");
+
+          if (isWrongId === "true") {
+            wrongIdNotification.classList.add("notification-show");
+
+            setTimeout(() => {
+              wrongIdNotification.classList.add("notification-hidden");
+            }, 10000);
+          }
+        }
+
+        if (wrongIdNotification.classList.contains("notification-show")) {
+          wrongIdNotification.addEventListener("click", () => {
+            wrongIdNotification.classList.add("notification-hidden-fast");
+          });
+
+          buttons.forEach(function (button) {
+            button.addEventListener("mouseover", function () {
+              octiLove(image);
+            });
+            button.addEventListener("mouseout", function () {
+              octiBasic(image);
+            });
+          });
+        }
+
+        //-----------------js pour page service changement de contenu
+        var slides = document.querySelectorAll(".slide"); //Sélectionne tous les éléments HTML avec la classe slide et les stocke dans la variable slides.//
+        var btns = document.querySelectorAll(".btn");
+        let currentSlide = 1;
+
+        // Javascript for image slider manual navigation
+        var manualNav = function (manual) {
+          slides.forEach((slide) => {
+            slide.classList.remove("active");
+
+            btns.forEach((btn) => {
+              btn.classList.remove("active");
+            });
+          });
+
+          slides[manual].classList.add("active");
+          btns[manual].classList.add("active");
+        };
+
+        btns.forEach((btn, i) => {
+          btn.addEventListener("click", () => {
+            manualNav(i);
+            currentSlide = i;
+          });
+        });
+
+        var image = document.getElementById("octi-basic");
+
+        var buttons = document.querySelectorAll("button");
+
+        buttons.forEach(function (button) {
+          button.addEventListener("mouseover", function () {
+            octiLove(image);
+          });
+          button.addEventListener("mouseout", function () {
+            octiBasic(image);
+          });
+        });
+        // Suivi du poulpe et changement d'émotions
+
+        var isTouchDevice =
+          "ontouchstart" in window || navigator.maxTouchPoints > 0;
+
+        var octi = document.querySelector("#octi-basic");
+        octi.style.display = "none";
+
+        // if (!isTouchDevice) {
+        document.addEventListener("mousemove", function () {
+          if (octi.style.display === "none") {
+            octi.style.display = "block";
+            octiBasic(octi);
+          }
+        });
+
+        function octiBasic() {
+          octi.src = "../images/octi-basic.png";
+        }
+
+        function octiLove() {
+          octi.src = "../images/octi-love.png";
+        }
+
+        function octiStar() {
+          octi.src = "../images/octi-star.png";
+        }
+
+        var targetX = 0;
+        var targetY = 0;
+        var offsetX = 40;
+        var offsetY = -40;
+        var speed = 0.2;
+
+        document.addEventListener("mousemove", function (event) {
+          targetX = event.clientX + offsetX;
+          targetY = event.clientY + offsetY;
+        });
+
+        window.addEventListener("scroll", function () {
+          octi.style.position = "fixed";
+        });
+
+        function follow() {
+          octi.style.left =
+            octi.offsetLeft + (targetX - octi.offsetLeft) * speed + "px";
+          octi.style.top =
+            octi.offsetTop + (targetY - octi.offsetTop) * speed + "px";
+          requestAnimationFrame(follow);
+        }
+
+        follow();
+
+        // }
+      </script>
     </div>
   </body>
 </html>

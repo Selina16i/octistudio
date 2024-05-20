@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../selina.css">
+    <link rel="icon" type="image/png" href="../images/octi_icon.png" />
     <style>
         section {
             border: solid black 0.5rem;
@@ -19,12 +20,10 @@
 </head>
 
 <body>
+    <img id="octi-basic" src="../images/octi-basic.png" alt="Poulpe de l'agence d'infographie varoise OCTI Studio">
     <header>
         <div class="container">
-            <input type="checkbox">
-            <div class="burger">
-                <img src="../images/burger.png" alt="">
-            </div>
+            
             <button class="header_button" type="button">Menu</button>
 
             <img id="logo" src="../images/logo.png">
@@ -92,11 +91,33 @@
         </div>
     </header>
 
+<!------------------------------------------------------ANNOUNCEMENT------------------------------------------------------>
+
+      <section id="announcement">
+        <div class="website_container">
+          <div class="marquee_right-to-left">
+            <p>
+              ASSISTEZ À UN ÉVÉNEMENT EXCEPTIONNEL AUTOUR DE LA "TRUFFE DU
+              CANADA" LE 23 MAI PAR OCTISTUDIO -
+            </p>
+            <p>
+              ASSISTEZ À UN ÉVÉNEMENT EXCEPTIONNEL AUTOUR DE LA "TRUFFE DU
+              CANADA" LE 23 MAI PAR OCTISTUDIO -
+            </p>
+            <p>
+              ASSISTEZ À UN ÉVÉNEMENT EXCEPTIONNEL AUTOUR DE LA "TRUFFE DU
+              CANADA" LE 23 MAI PAR OCTISTUDIO -
+            </p>
+          </div>
+        </div>
+      </section>
+
     <!-------------------------Call to action-------------------->
     <section class="cta-form">
         <h1>Vous voulez nous contacter ?</h1>
         <h3>Ouvrir le formulaire</h3>
-        <a href="" class="hero-btn" id="ok_button">OK </a>
+        <!-- <a href="" class="hero-btn" id="ok_button">OK </a> -->
+        <button class="header_button" type="button" id="ok_button" >OK</button>
     </section>
 
     <!-------------------------Contact-------------------->
@@ -151,7 +172,8 @@
     <!-------------------------Call to action-------------------->
     <section class="cta_to_services">
         <h1>Vous avez un projet en tête ?</h1>
-        <a href="services.html" target="_blank" class="hero-btn">Nos services </a>
+        <!-- <a href="services.html" target="_blank" class="hero-btn">Nos services </a> -->
+        <button class="header_button" type="button" ><a href="services.html" target="_blank">Nos services </a></button>
     </section>
 
 
@@ -162,10 +184,10 @@
      <div class="footer-col">
         <ul>
             <h6>Menu</h6>
-            <li><a href="accueil.html">Accueil</a></li>
-            <li><a href="services.html">Nos services</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="blog.php">Blog</a></li>
+            <li><a href="accueil.html" target="_blank">Accueil</a></li>
+            <li><a href="services.html" target="_blank">Nos services</a></li>
+            <li><a href="contact.html" target="_blank">Contact</a></li>
+            <li><a href="blog.php" target="_blank">Blog</a></li>
         </ul>
        
      </div>
@@ -185,17 +207,92 @@
      </div>
 
      <div class="footer-col">
-        <img src="../images/logo.png" alt="">
+        <a href="accueil.html" target="_blank"><img src="../images/logo.png" alt=""></a>
      </div>
     </div>
     <div class="droit">
     <p>@SAEMMITLN | Tous droits réservés</p>
 </div>
    </section>
+<!------------------------------------------------------JAVASCRIPT CURSOR------------------------------------------------------>
+
+<script>
+        var image = document.getElementById("octi-basic");
+
+        var buttons = document.querySelectorAll("button");
+
+        buttons.forEach(function (button) {
+          button.addEventListener("mouseover", function () {
+            octiLove(image);
+          });
+          button.addEventListener("mouseout", function () {
+            octiBasic(image);
+          });
+        });
+        // Suivi du poulpe et changement d'émotions
+
+        var isTouchDevice =
+          "ontouchstart" in window || navigator.maxTouchPoints > 0;
+
+        var octi = document.querySelector("#octi-basic");
+        octi.style.display = "none";
+
+        // if (!isTouchDevice) {
+        document.addEventListener("mousemove", function () {
+          if (octi.style.display === "none") {
+            octi.style.display = "block";
+            octiBasic(octi);
+          }
+        });
+
+        function octiBasic() {
+          octi.src = "../images/octi-basic.png";
+        }
+
+        function octiLove() {
+          octi.src = "../images/octi-love.png";
+        }
+
+        function octiStar() {
+          octi.src = "../images/octi-star.png";
+        }
+
+        var targetX = 0;
+        var targetY = 0;
+        var offsetX = 40;
+        var offsetY = -40;
+        var speed = 0.2;
+
+        document.addEventListener("mousemove", function (event) {
+          targetX = event.clientX + offsetX;
+          targetY = event.clientY + offsetY;
+        });
+
+        window.addEventListener("scroll", function () {
+          octi.style.position = "fixed";
+        });
+
+        function follow() {
+          octi.style.left =
+            octi.offsetLeft + (targetX - octi.offsetLeft) * speed + "px";
+          octi.style.top =
+            octi.offsetTop + (targetY - octi.offsetTop) * speed + "px";
+          requestAnimationFrame(follow);
+        }
+
+        follow();
+
+        // }
+      </script>
+
+
+
 
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="../script.js"></script>
+
+
 </body>
 
 </html>
