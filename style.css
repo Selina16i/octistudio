@@ -2,14 +2,7 @@
   font-family: PixCon;
   src: local("/fonts/PixCon.ttf");
 }
-@font-face {
-  font-family: JosefinSans-Bold;
-  src: local("/fonts/JosefinSans-Bold.ttf");
-}
-@font-face {
-  font-family: JosefinSans;
-  src: local("/fonts/JosefinSans-Regular.ttf");
-}
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
 
 body {
   margin: 0;
@@ -593,7 +586,7 @@ header .container {
 }
 
 .projects p {
-  font-family: josefin sans;
+  font-family: Josefin sans;
   font-size: 20px;
 }
 
@@ -713,7 +706,7 @@ header .container {
 }
 
 .equipe-layer {
-  background: transparent;
+  background: rgba(0, 0, 0, 0.5);
   height: 100%;
   width: 100%;
   position: absolute;
@@ -780,7 +773,7 @@ header .container {
   font-size: 20px;
   line-height: 22px;
   padding: 20px;
-  font-family: josefin sans;
+  font-family: Josefin Sans;
 }
 
 .row h3 {
@@ -895,7 +888,7 @@ header .container {
 
 .footer-col {
   flex-basis: 25%;
-  padding: 100px;
+  padding: 50px 100px;
   padding-bottom: 0;
 }
 
@@ -924,7 +917,8 @@ header .container {
 }
 
 .droit p {
-  padding-bottom: 50px;
+  padding-bottom: 30px;
+  margin: 0;
   padding-left: 90px;
 }
 
@@ -1158,3 +1152,26 @@ header .container {
     font-size: 20px;
   }
 }
+
+/* ----------------MENU---------------------- */
+/* .menu-slide {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: Josefin Sans, sans-serif;
+}
+.menu {
+  background: #fff;
+}
+.wrapper {
+  display: flex;
+  position: relative;
+}
+.wrapper .sidebar {
+  position: fixed;
+  width: 200px;
+  height: 100%;
+  background: #fff;
+} */

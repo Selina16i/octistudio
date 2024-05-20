@@ -17,6 +17,7 @@ $articles = $bdd->query('SELECT * FROM articles ORDER BY date_time_post DESC LIM
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
     <link rel="stylesheet" href="../style.css">
+
     <style>
         /* Ajout des styles pour la grille */
         .articles-container {
@@ -24,15 +25,15 @@ $articles = $bdd->query('SELECT * FROM articles ORDER BY date_time_post DESC LIM
             flex-wrap: wrap;
             gap: 20px; /* Espace entre les articles */
             flex-direction: row;
-            padding: 5% 10%;
+            padding: 5% 15%;
             border-bottom: solid black 0.5rem;
         }
         .article-item {
-            flex: 1 1 400px; /* Deux articles par ligne avec espace */
+            flex: 1 1 350px; /* Deux articles par ligne avec espace */
             box-sizing: border-box;
             margin: 10px; 
             border:solid black 0.5rem;
-            max-width: 400px;
+            max-width: 350px;
             background-color: #ff8243;
         }
         .article-item img {
@@ -44,11 +45,12 @@ $articles = $bdd->query('SELECT * FROM articles ORDER BY date_time_post DESC LIM
             font-family:Pixcon;
         }
         .article-info p{
-            font-family:JosefinSans;
+            font-family:Josefin Sans;
         }
 
         .article-info {
             border-top: solid black 0.5rem;
+            padding: 0 2%;
         }
 
         .limit{
@@ -67,14 +69,16 @@ $articles = $bdd->query('SELECT * FROM articles ORDER BY date_time_post DESC LIM
      <header>
         <div class="container">
                 <label for="">
-                    <div class="menu-slide">
-                        <button class="header_button" type="button">Menu</button>
+                    <div class="menu-slide wrapper">
+                        <div class="menu">
+                        <button class="header_button sidebar" type="button">Menu</button>
                         <ul>
                             <li><a href="accueil.html" target='blank'>Accueil</a></li>
                             <li><a href="services.html" target='blank'>Nos services</a></li>
                             <li><a href="blog.php" target='blank'> Blog</a></li>
                             <li><a href="contact.html" target='blank'>Contact</a></li>
                         </ul>
+                        </div>
                     </div>
                 </label>
                 
@@ -202,42 +206,42 @@ $articles = $bdd->query('SELECT * FROM articles ORDER BY date_time_post DESC LIM
         ?>
     </div>
 
-   <!-------------------------Footer-------------------->
-    <section class="footer">
-        <div class="row-footer">
+ <!-------------------------Footer-------------------->
+   <section class="footer">
+    <div class="row-footer">
 
-            <div class="footer-col">
-                <ul>
-                    <h6>Menu</h6>
-                    <li><a href="">Accueil</a></li>
-                    <li><a href="">Nos services</a></li>
-                    <li><a href="">Contact</a></li>
-                    <li><a href="">Blog</a></li>
-                </ul>
+     <div class="footer-col">
+        <ul>
+            <h6>Menu</h6>
+            <li><a href="accueil.html">Accueil</a></li>
+            <li><a href="services.html">Nos services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="blog.php">Blog</a></li>
+        </ul>
+       
+     </div>
 
-            </div>
+     <div class="footer-col">
+        <ul>
+            <h6>Information</h6>
+            <li><a href="">Confidentialités</a></li>
+            <li><a href="">Mentions légales</a></li>
+            <li><a href="">Plan du site</a></li>
+        </ul>
+     </div>
 
-            <div class="footer-col">
-                <ul>
-                    <h6>Information</h6>
-                    <li><a href="">Confidentialités</a></li>
-                    <li><a href="">Mentions légales</a></li>
-                    <li><a href="">Plan du site</a></li>
-                </ul>
-            </div>
+     <div class="footer-col">
+        <h6>Nous contacter</h6>
+        <p>70 Avenue Roger Devoucoux <br>83000 TOULON <br>04 94 00 00 00 <br>octistudio@proton.me</p>
+     </div>
 
-            <div class="footer-col">
-                <h6>Nous contacter</h6>
-                <p>70 Avenue Roger Devoucoux <br>83000 TOULON <br>04 94 00 00 00 <br>octistudio@proton.me</p>
-            </div>
-
-            <div class="footer-col">
-                <img src="../images/logo.png" alt="">
-            </div>
-        </div>
-        <div class="droit">
-            <p>@SAEMMITLN | Tous droits réservés</p>
-        </div>
-    </section>
+     <div class="footer-col">
+        <img src="../images/logo.png" alt="">
+     </div>
+    </div>
+    <div class="droit">
+    <p>@SAEMMITLN | Tous droits réservés</p>
+</div>
+   </section>
 </body>
 </html>
